@@ -10,6 +10,55 @@ identity:
     zh_Hans: "上传和管理阿里云对象存储服务(OSS)中的文件"
     pt_BR: "阿里云OSS文件上传"
   icon: "icon.svg"
+  tags:
+  - utilities
+  - other
+credentials_for_provider:
+  access_key_id:
+    type: secret-input
+    required: true
+    label:
+      en_US: "Access Key ID"
+      zh_Hans: "访问密钥ID"
+    placeholder:
+      en_US: "Please input your Aliyun Access Key ID"
+      zh_Hans: "请输入您的阿里云访问密钥ID"
+    help:
+      en_US: "Get your Aliyun Access Key ID from Aliyun console"
+      zh_Hans: "从阿里云控制台获取您的访问密钥ID"
+  access_key_secret:
+    type: secret-input
+    required: true
+    label:
+      en_US: "Access Key Secret"
+      zh_Hans: "访问密钥Secret"
+    placeholder:
+      en_US: "Please input your Aliyun Access Key Secret"
+      zh_Hans: "请输入您的阿里云访问密钥Secret"
+    help:
+      en_US: "Get your Aliyun Access Key Secret from Aliyun console"
+      zh_Hans: "从阿里云控制台获取您的访问密钥Secret"
+  bucket_name:
+    type: text-input
+    required: true
+    label:
+      en_US: "Bucket Name"
+      zh_Hans: "存储桶名称"
+    placeholder:
+      en_US: "Please input your OSS bucket name"
+      zh_Hans: "请输入您的OSS存储桶名称"
+  endpoint:
+    type: text-input
+    required: true
+    label:
+      en_US: "Endpoint"
+      zh_Hans: "访问域名"
+    placeholder:
+      en_US: "Please input your OSS endpoint"
+      zh_Hans: "请输入您的OSS访问域名"
+    help:
+      en_US: "e.g. oss-cn-hangzhou.aliyuncs.com"
+      zh_Hans: "例如：oss-cn-hangzhou.aliyuncs.com"
 tools:
   - tools/aliyun-oss-plugin.yaml
 extra:

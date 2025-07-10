@@ -2,28 +2,67 @@ identity:
   name: "aliyun-oss-plugin"
   author: "tangjiale"
   label:
-    en_US: "aliyun-oss-plugin"
-    zh_Hans: "aliyun-oss-plugin"
-    pt_BR: "aliyun-oss-plugin"
+    en_US: "Aliyun OSS Upload"
+    zh_Hans: "阿里云OSS文件上传"
+    pt_BR: "Aliyun OSS Upload"
 description:
   human:
-    en_US: "阿里云OSS文件上传"
-    zh_Hans: "阿里云OSS文件上传"
-    pt_BR: "阿里云OSS文件上传"
-  llm: "阿里云OSS文件上传"
+    en_US: "Upload files to Aliyun Object Storage Service (OSS)"
+    zh_Hans: "上传文件到阿里云对象存储服务(OSS)"
+    pt_BR: "Upload files to Aliyun Object Storage Service (OSS)"
+  llm: "Upload files to Aliyun Object Storage Service (OSS). You can upload files by providing file content or file URL."
 parameters:
-  - name: query
+  - name: file_content
+    type: string
+    required: false
+    label:
+      en_US: "File Content"
+      zh_Hans: "文件内容"
+      pt_BR: "File Content"
+    human_description:
+      en_US: "The content of the file to upload"
+      zh_Hans: "要上传的文件内容"
+      pt_BR: "The content of the file to upload"
+    llm_description: "The content of the file to upload. This parameter is required if file_url is not provided."
+    form: llm
+  - name: file_url
+    type: string
+    required: false
+    label:
+      en_US: "File URL"
+      zh_Hans: "文件URL"
+      pt_BR: "File URL"
+    human_description:
+      en_US: "The URL of the file to upload"
+      zh_Hans: "要上传的文件URL"
+      pt_BR: "The URL of the file to upload"
+    llm_description: "The URL of the file to upload. This parameter is required if file_content is not provided."
+    form: llm
+  - name: file_name
     type: string
     required: true
     label:
-      en_US: Query string
-      zh_Hans: 查询语句
-      pt_BR: Query string
+      en_US: "File Name"
+      zh_Hans: "文件名"
+      pt_BR: "File Name"
     human_description:
-      en_US: "阿里云OSS文件上传"
-      zh_Hans: "阿里云OSS文件上传"
-      pt_BR: "阿里云OSS文件上传"
-    llm_description: "阿里云OSS文件上传"
+      en_US: "The name of the file to upload"
+      zh_Hans: "要上传的文件名"
+      pt_BR: "The name of the file to upload"
+    llm_description: "The name of the file to upload, including extension."
+    form: llm
+  - name: object_key
+    type: string
+    required: false
+    label:
+      en_US: "Object Key"
+      zh_Hans: "对象键"
+      pt_BR: "Object Key"
+    human_description:
+      en_US: "The object key (path) in OSS bucket"
+      zh_Hans: "OSS存储桶中的对象键（路径）"
+      pt_BR: "The object key (path) in OSS bucket"
+    llm_description: "The object key (path) in OSS bucket. If not provided, file_name will be used."
     form: llm
 extra:
   python:
