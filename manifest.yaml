@@ -1,0 +1,43 @@
+version: 0.0.1
+type: plugin
+author: tangjiale
+name: aliyun-oss-plugin
+label:
+  en_US: aliyun-oss-plugin
+  ja_JP: aliyun-oss-plugin
+  zh_Hans: aliyun-oss-plugin
+  pt_BR: aliyun-oss-plugin
+description:
+  en_US: 阿里云OSS文件上传
+  ja_JP: 阿里云OSS文件上传
+  zh_Hans: 阿里云OSS文件上传
+  pt_BR: 阿里云OSS文件上传
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    endpoint:
+      enabled: true
+    app:
+      enabled: true
+    storage:
+      enabled: true
+      size: 1048576
+plugins:
+  tools:
+    - provider/aliyun-oss-plugin.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: 0.0.1
+created_at: 2025-07-10T17:02:07.378089+08:00
+privacy: PRIVACY.md
+verified: false

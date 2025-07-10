@@ -1,0 +1,30 @@
+identity:
+  name: "aliyun-oss-plugin"
+  author: "tangjiale"
+  label:
+    en_US: "aliyun-oss-plugin"
+    zh_Hans: "aliyun-oss-plugin"
+    pt_BR: "aliyun-oss-plugin"
+description:
+  human:
+    en_US: "阿里云OSS文件上传"
+    zh_Hans: "阿里云OSS文件上传"
+    pt_BR: "阿里云OSS文件上传"
+  llm: "阿里云OSS文件上传"
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query string
+      zh_Hans: 查询语句
+      pt_BR: Query string
+    human_description:
+      en_US: "阿里云OSS文件上传"
+      zh_Hans: "阿里云OSS文件上传"
+      pt_BR: "阿里云OSS文件上传"
+    llm_description: "阿里云OSS文件上传"
+    form: llm
+extra:
+  python:
+    source: tools/aliyun-oss-plugin.py

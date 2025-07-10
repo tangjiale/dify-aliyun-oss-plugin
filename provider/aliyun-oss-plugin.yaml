@@ -1,0 +1,17 @@
+identity:
+  author: "tangjiale"
+  name: "aliyun-oss-plugin"
+  label:
+    en_US: "aliyun-oss-plugin"
+    zh_Hans: "阿里云OSS文件上传"
+    pt_BR: "aliyun-oss-plugin"
+  description:
+    en_US: "Upload and manage files in Aliyun Object Storage Service (OSS)"
+    zh_Hans: "上传和管理阿里云对象存储服务(OSS)中的文件"
+    pt_BR: "阿里云OSS文件上传"
+  icon: "icon.svg"
+tools:
+  - tools/aliyun-oss-plugin.yaml
+extra:
+  python:
+    source: provider/aliyun-oss-plugin.py
